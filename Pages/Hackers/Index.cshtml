@@ -1,0 +1,66 @@
+@page
+@model HackerData.Pages.Hackers.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HackerDetails[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HackerDetails[0].PowerAcquisitionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HackerDetails[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HackerDetails[0].BirthYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HackerDetails[0].Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HackerDetails[0].Ethics)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.HackerDetails) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PowerAcquisitionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ethics)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

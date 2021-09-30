@@ -1,0 +1,55 @@
+@page
+@model HackerData.Pages.Hackers.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>HackerDetails</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HackerDetails.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HackerDetails.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HackerDetails.PowerAcquisitionDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HackerDetails.PowerAcquisitionDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HackerDetails.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HackerDetails.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HackerDetails.BirthYear)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HackerDetails.BirthYear)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HackerDetails.Type)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HackerDetails.Type)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HackerDetails.Ethics)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HackerDetails.Ethics)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.HackerDetails.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
